@@ -4,10 +4,6 @@ A minimal conversational AI agent built with LangGraph, designed for agent scaff
 
 [中文版](README_CN.md)
 
-## Project Showcase
-
-This project builds a typical yet fully-featured graph-based agent that demonstrates the core capabilities of LangGraph, including state management, message flow, and extensible architecture design.
-
 ## Prerequisites
 
 Before you begin, ensure your development environment has the following tools installed:
@@ -142,7 +138,7 @@ clean_graph/
 | `LLM_MODEL` | Yes | Model name to use | - |
 | `LLM_API_KEY` | Yes | API key for authentication | - |
 | `LANGSMITH_TRACING` | No | Enable LangSmith tracing | `false` |
-| `LANGSMITH_API_KEY` | No | LangSmith API key | - |
+| `LANGSMITH_API_KEY` | Yes | LangSmith API key | - |
 
 ### Supported LLM Providers
 
