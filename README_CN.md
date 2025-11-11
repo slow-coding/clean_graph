@@ -156,6 +156,7 @@ clean_graph/
 - `python-dotenv~=1.0` - 环境变量管理
 - `langgraph-checkpoint>=2.1.0` - 状态检查点
 - `langgraph-cli[inmem]` - 开发工具（内存存储）
+- `pydantic~=2.0` - 数据验证和设置管理
 
 ## 引用
 

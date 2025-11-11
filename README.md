@@ -160,6 +160,7 @@ This project is compatible with any OpenAI-compatible API:
 - `python-dotenv~=1.0` - Environment variable management
 - `langgraph-checkpoint>=2.1.0` - State checkpointing
 - `langgraph-cli[inmem]` - Development tools (in-memory storage)
+- `pydantic~=2.0` - Data validation and settings management
 
 ## References
 
