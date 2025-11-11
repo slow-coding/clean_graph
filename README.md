@@ -26,8 +26,8 @@ pip install -r requirements.txt
 Edit `.env` file with your configuration:
 
 ```env
-# Required: LLM API Configuration
-LLM_API_BASE=http://localhost:1234/v1  # For LM Studio or your local LLM
+# Required: LLM API Configuration (supports any OpenAI-compatible API)
+LLM_API_BASE=http://localhost:1234/v1  # LM Studio, Ollama, or other OpenAI-compatible API endpoint
 LLM_MODEL=qwen/qwen3-next-80b          # Your model name
 LLM_API_KEY=your-api-key-here          # API key for authentication
 

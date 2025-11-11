@@ -24,8 +24,8 @@ pip install -r requirements.txt
 编辑 `.env` 文件，填入你的配置：
 
 ```env
-# 必需: LLM API 配置
-LLM_API_BASE=http://localhost:1234/v1  # LM Studio 或本地 LLM 地址
+# 必需: LLM API 配置 (支持任何 OpenAI 兼容的 API)
+LLM_API_BASE=http://localhost:1234/v1  # LM Studio、Ollama 或其他 OpenAI 兼容 API 地址
 LLM_MODEL=qwen/qwen3-next-80b          # 你的模型名称
 LLM_API_KEY=your-api-key-here          # 身份验证的 API 密钥
 
