@@ -96,6 +96,8 @@ For the best development experience, it's recommended to register for a LangSmit
 2. Get your API key
 3. Configure `LANGSMITH_API_KEY` in your `.env` file
 
+Note: Even when using local graphs with LangGraph Studio, you still need to register for a LangSmith Key (free) and have logged into LangSmith (as of November 2025).
+
 #### Start Development Server
 
 Start the development server with LangGraph Studio:

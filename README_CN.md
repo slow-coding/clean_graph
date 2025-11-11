@@ -136,7 +136,9 @@ clean_graph/
 | `LLM_MODEL` | 是 | 要使用的模型名称 | - |
 | `LLM_API_KEY` | 是 | 身份验证的 API 密钥 | - |
 | `LANGSMITH_TRACING` | 否 | 启用 LangSmith 追踪 | `false` |
-| `LANGSMITH_API_KEY` | 否 | LangSmith API 密钥 | - |
+| `LANGSMITH_API_KEY` | 是 | LangSmith API 密钥 | - |
+
+注：即使 LangGraph Studio 使用的是本地 graph，依然需要注册 LangSmith Key（免费），并且登录过 LangSmith （截止 2025-11）
 
 ### 支持的 LLM 提供商
 
