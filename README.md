@@ -4,9 +4,49 @@ A minimal conversational AI agent built with LangGraph, designed for agent scaff
 
 [中文版](README_CN.md)
 
+## Quick Start
+
+### 1. Environment Setup
+
+Create a conda environment:
+
+```bash
+conda create -n clean_graph python=3.12
+conda activate clean_graph
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment
+
+Edit `.env` file with your configuration:
+
+```env
+# Required: LLM API Configuration
+LLM_API_BASE=http://localhost:1234/v1  # For LM Studio or your local LLM
+LLM_MODEL=qwen/qwen3-next-80b          # Your model name
+LLM_API_KEY=your-api-key-here          # API key for authentication
+
+# Optional: LangSmith Tracing
+LANGSMITH_TRACING=false                # Set to 'true' to enable
+LANGSMITH_API_KEY=your-langsmith-key   # Your LangSmith API key
+```
+
+### 4. Launch LangGraph Studio
+
+```bash
+langgraph dev --no-reload
+```
+
+Access the LangGraph Studio interface at `http://localhost:2024`.
+
 ## Prerequisites
 
-Before you begin, ensure your development environment has the following tools installed:
+### Required Tools
 
 - **Python**: Programming language environment
 - **pip**: Python package manager
@@ -20,73 +60,21 @@ Before you begin, ensure your development environment has the following tools in
 - [pip Installation](https://pip.pypa.io/en/stable/installation/#)
 - [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
-## Create Virtual Environment
+## Configuration
 
-It's recommended to create an isolated development environment using conda:
-
-```bash
-conda create -n clean_graph python=3.12
-conda activate clean_graph
-```
-
-## Minimal Project Structure
-
-This project adopts a minimal but complete engineering structure:
-
-```
-clean_graph/
-├── langgraph.json    # LangGraph configuration file
-├── requirements.txt  # Dependency management
-├── .env             # Environment variables
-└── src/
-    ├── __init__.py
-    ├── llms.py      # LLM configuration
-    └── graph.py     # Graph definition
-```
-
-## Installation
-
-### Install Dependencies
-
-Install project dependencies using pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-## LLM Configuration
+### LLM Setup
 
 This project supports multiple LLM providers, with LM Studio recommended for local development:
 
-### LM Studio Setup
+#### LM Studio Setup
 
 1. Download and install [LM Studio](https://lmstudio.ai/)
 2. Select and download suitable models in LM Studio
 3. Start the local server (typically at `http://localhost:1234`)
 
-### Environment Variables Configuration
-
-Edit `.env` file with your configuration:
-```env
-# Required: LLM API Configuration
-LLM_API_BASE=http://localhost:1234/v1  # For LM Studio or your local LLM
-LLM_MODEL=qwen/qwen3-next-80b          # Your model name
-LLM_API_KEY=your-api-key-here          # API key for authentication
-
-# Optional: LangSmith Tracing
-LANGSMITH_TRACING=false                # Set to 'true' to enable
-LANGSMITH_API_KEY=your-langsmith-key   # Your LangSmith API key
-```
-
-## LangGraph Studio Launch!
-
-### LangGraph Studio Development
-
-This project is specifically designed to be developed using **LangGraph Studio**, the official development tool for LangGraph applications that provides powerful visualization and debugging capabilities.
-
 #### LangSmith Registration
 
-For the best development experience, it's recommended to register for a LangSmith account:
+For the best development experience, register for a LangSmith account:
 
 1. Visit [LangSmith](https://smith.langchain.com/) and create an account
 2. Get your API key
@@ -94,18 +82,22 @@ For the best development experience, it's recommended to register for a LangSmit
 
 Note: Even when using local graphs with LangGraph Studio, you still need to register for a LangSmith Key (free) and have logged into LangSmith (as of November 2025).
 
-#### Start Development Server
+### Environment Variables
 
-Start the development server with LangGraph Studio:
+| Variable | Required | Description | Default |
+|----------|----------|-------------|---------|
+| `LLM_API_BASE` | Yes | Base URL for LLM API endpoint | - |
+| `LLM_MODEL` | Yes | Model name to use | - |
+| `LLM_API_KEY` | Yes | API key for authentication | - |
+| `LANGSMITH_TRACING` | No | Enable LangSmith tracing | `false` |
+| `LANGSMITH_API_KEY` | Yes | LangSmith API key | - |
 
-```bash
-langgraph dev --no-reload
-```
+### Supported LLM Providers
 
-This will launch:
-- **LangGraph Studio Interface**: Typically accessible at `http://localhost:2024`
-- **Development Server**: Auto-reload disabled for stability
-- **Real-time Monitoring**: Connected to LangSmith for performance tracing
+This project is compatible with any OpenAI-compatible API:
+
+- **Local LLMs**: LM Studio, Ollama, LocalAI
+- **Cloud Providers**: OpenAI, Together AI, Groq, etc.
 
 ## Project Structure
 
@@ -128,24 +120,22 @@ clean_graph/
 - **`llms.py`**: Configures the LLM client with streaming support
 - **`langgraph.json`**: LangGraph application configuration
 
-## Configuration
+## Development
 
-### Environment Variables
+### LangGraph Studio Development
 
-| Variable | Required | Description | Default |
-|----------|----------|-------------|---------|
-| `LLM_API_BASE` | Yes | Base URL for LLM API endpoint | - |
-| `LLM_MODEL` | Yes | Model name to use | - |
-| `LLM_API_KEY` | Yes | API key for authentication | - |
-| `LANGSMITH_TRACING` | No | Enable LangSmith tracing | `false` |
-| `LANGSMITH_API_KEY` | Yes | LangSmith API key | - |
+This project is specifically designed to be developed using **LangGraph Studio**, the official development tool for LangGraph applications that provides powerful visualization and debugging capabilities.
 
-### Supported LLM Providers
+Start the development server:
 
-This project is compatible with any OpenAI-compatible API:
+```bash
+langgraph dev --no-reload
+```
 
-- **Local LLMs**: LM Studio, Ollama, LocalAI
-- **Cloud Providers**: OpenAI, Together AI, Groq, etc.
+This will launch:
+- **LangGraph Studio Interface**: Typically accessible at `http://localhost:2024`
+- **Development Server**: Auto-reload disabled for stability
+- **Real-time Monitoring**: Connected to LangSmith for performance tracing
 
 ## Dependencies
 

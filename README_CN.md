@@ -2,9 +2,49 @@
 
 一个基于 LangGraph 构建的极简对话式AI智能体，用于智能体脚手架和游乐场，为学习，构建和实验高级智能体技术提供了实用的起点。
 
-## 前置安装
+## 快速开始
 
-在开始之前，请确保你的开发环境已安装以下工具：
+### 1. 环境设置
+
+创建 conda 环境：
+
+```bash
+conda create -n clean_graph python=3.12
+conda activate clean_graph
+```
+
+### 2. 安装依赖
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 环境配置
+
+编辑 `.env` 文件，填入你的配置：
+
+```env
+# 必需: LLM API 配置
+LLM_API_BASE=http://localhost:1234/v1  # LM Studio 或本地 LLM 地址
+LLM_MODEL=qwen/qwen3-next-80b          # 你的模型名称
+LLM_API_KEY=your-api-key-here          # 身份验证的 API 密钥
+
+# 可选: LangSmith 追踪
+LANGSMITH_TRACING=false                # 设置为 'true' 启用
+LANGSMITH_API_KEY=your-langsmith-key   # 你的 LangSmith API 密钥
+```
+
+### 4. 启动 LangGraph Studio
+
+```bash
+langgraph dev --no-reload
+```
+
+在 `http://localhost:2024` 访问 LangGraph Studio 界面。
+
+## 前置要求
+
+### 必需工具
 
 - **Python**: 编程语言环境
 - **pip**: Python 包管理器
@@ -18,67 +58,17 @@
 - [pip Installation](https://pip.pypa.io/en/stable/installation/#)
 - [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
-## 创建虚拟环境
+## 配置
 
-建议使用 conda 创建独立的开发环境：
-
-```bash
-conda create -n clean_graph python=3.12
-conda activate clean_graph
-```
-
-## 最小工程结构
-
-本项目采用最小化但完整的工程结构：
-
-```
-clean_graph/
-├── langgraph.json    # LangGraph 配置文件
-├── requirements.txt  # 依赖管理
-├── .env             # 环境变量
-└── src/
-    ├── __init__.py
-    ├── llms.py      # LLM 配置
-    └── graph.py     # 图定义
-```
-
-## 安装依赖
-
-使用 pip 安装项目依赖：
-
-```bash
-pip install -r requirements.txt
-```
-
-## LLM 配置
+### LLM 设置
 
 本项目支持多种 LLM 提供商，推荐使用 LM Studio 进行本地开发：
 
-### LM Studio 设置
+#### LM Studio 设置
 
 1. 下载并安装 [LM Studio](https://lmstudio.ai/)
 2. 在 LM Studio 中选择并下载合适的模型
 3. 启动本地服务器（通常在 `http://localhost:1234`）
-
-### 环境变量配置
-
-编辑 `.env` 文件，填入你的配置：
-```env
-# 必需: LLM API 配置
-LLM_API_BASE=http://localhost:1234/v1  # LM Studio 或本地 LLM 地址
-LLM_MODEL=qwen/qwen3-next-80b          # 你的模型名称
-LLM_API_KEY=your-api-key-here          # 身份验证的 API 密钥
-
-# 可选: LangSmith 追踪
-LANGSMITH_TRACING=false                # 设置为 'true' 启用
-LANGSMITH_API_KEY=your-langsmith-key   # 你的 LangSmith API 密钥
-```
-
-## LangGraph Studio 启动！
-
-### LangGraph Studio 开发
-
-此项目专门设计为使用 **LangGraph Studio** 进行开发，这是 LangGraph 应用的官方开发工具，提供了强大的可视化和调试功能。
 
 #### LangSmith 注册
 
@@ -88,18 +78,24 @@ LANGSMITH_API_KEY=your-langsmith-key   # 你的 LangSmith API 密钥
 2. 获取你的 API 密钥
 3. 在 `.env` 文件中配置 `LANGSMITH_API_KEY`
 
-#### 启动开发服务器
+注：即使 LangGraph Studio 使用的是本地 graph，依然需要注册 LangSmith Key（免费），并且登录过 LangSmith （截止 2025-11）
 
-使用 LangGraph Studio 启动开发服务器：
+### 环境变量
 
-```bash
-langgraph dev --no-reload
-```
+| 变量 | 必需 | 描述 | 默认值 |
+|------|------|------|--------|
+| `LLM_API_BASE` | 是 | LLM API 端点的基础URL | - |
+| `LLM_MODEL` | 是 | 要使用的模型名称 | - |
+| `LLM_API_KEY` | 是 | 身份验证的 API 密钥 | - |
+| `LANGSMITH_TRACING` | 否 | 启用 LangSmith 追踪 | `false` |
+| `LANGSMITH_API_KEY` | 是 | LangSmith API 密钥 | - |
 
-这将启动：
-- **LangGraph Studio 界面**: 通常可在 `http://localhost:2024` 访问
-- **开发服务器**: 禁用自动重载以确保稳定性
-- **实时监控**: 连接到 LangSmith 进行性能追踪
+### 支持的 LLM 提供商
+
+此项目兼容任何 OpenAI 兼容的 API：
+
+- **本地LLM**: LM Studio、Ollama、LocalAI
+- **云服务提供商**: OpenAI、Together AI、Groq 等
 
 ## 项目结构
 
@@ -112,7 +108,7 @@ clean_graph/
 ├── .env                 # 环境配置
 ├── langgraph.json       # LangGraph 应用定义
 ├── requirements.txt     # Python 依赖
-└── README.md           # 英文版说明文档
+├── README.md           # 英文版说明文档
 └── README_CN.md        # 中文版说明文档
 ```
 
@@ -122,26 +118,22 @@ clean_graph/
 - **`llms.py`**: 配置支持流式传输的 LLM 客户端
 - **`langgraph.json`**: LangGraph 应用配置
 
-## 配置
+## 开发
 
-### 环境变量
+### LangGraph Studio 开发
 
-| 变量 | 必需 | 描述 | 默认值 |
-|------|------|------|--------|
-| `LLM_API_BASE` | 是 | LLM API 端点的基础URL | - |
-| `LLM_MODEL` | 是 | 要使用的模型名称 | - |
-| `LLM_API_KEY` | 是 | 身份验证的 API 密钥 | - |
-| `LANGSMITH_TRACING` | 否 | 启用 LangSmith 追踪 | `false` |
-| `LANGSMITH_API_KEY` | 是 | LangSmith API 密钥 | - |
+此项目专门设计为使用 **LangGraph Studio** 进行开发，这是 LangGraph 应用的官方开发工具，提供了强大的可视化和调试功能。
 
-注：即使 LangGraph Studio 使用的是本地 graph，依然需要注册 LangSmith Key（免费），并且登录过 LangSmith （截止 2025-11）
+启动开发服务器：
 
-### 支持的 LLM 提供商
+```bash
+langgraph dev --no-reload
+```
 
-此项目兼容任何 OpenAI 兼容的 API：
-
-- **本地LLM**: LM Studio、Ollama、LocalAI
-- **云服务提供商**: OpenAI、Together AI、Groq 等
+这将启动：
+- **LangGraph Studio 界面**: 通常可在 `http://localhost:2024` 访问
+- **开发服务器**: 禁用自动重载以确保稳定性
+- **实时监控**: 连接到 LangSmith 进行性能追踪
 
 ## 依赖项
 
