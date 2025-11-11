@@ -1,4 +1,5 @@
 # Environment variables (keep .env.example for template)
+.env
 .env.local
 .env.production
 
