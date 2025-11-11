@@ -1,6 +1,6 @@
 # Clean Graph
 
-A minimal conversational AI agent built with LangGraph, designed for agent scaffolding and playground.
+A minimal conversational AI agent built with LangGraph, designed for agent scaffolding and playground, providing a practical starting point for learning, building, and experimenting with advanced agent technologies.
 
 [中文版](README_CN.md)
 
