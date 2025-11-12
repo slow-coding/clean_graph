@@ -2,6 +2,22 @@
 
 一个基于 LangGraph 构建的极简对话式AI智能体，用于智能体脚手架和游乐场，为学习，构建和实验高级智能体技术提供了实用的起点。
 
+## 前置要求
+
+### 必需工具
+
+- **Python**: 编程语言环境
+- **pip**: Python 包管理器
+- **Miniconda**: 轻量级 conda 环境管理器
+- **VSCode**: 推荐的开发环境
+
+### 安装指南
+
+- [Python for MacOS](https://www.python.org/downloads/macos/)
+- [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
+- [pip Installation](https://pip.pypa.io/en/stable/installation/#)
+- [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
+
 ## 快速开始
 
 ### 1. 环境设置
@@ -41,22 +57,6 @@ langgraph dev --no-reload
 ```
 
 在 `http://localhost:2024` 访问 LangGraph Studio 界面。
-
-## 前置要求
-
-### 必需工具
-
-- **Python**: 编程语言环境
-- **pip**: Python 包管理器
-- **Miniconda**: 轻量级 conda 环境管理器
-- **VSCode**: 推荐的开发环境
-
-### 安装指南
-
-- [Python for MacOS](https://www.python.org/downloads/macos/)
-- [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
-- [pip Installation](https://pip.pypa.io/en/stable/installation/#)
-- [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
 ## 配置
 
