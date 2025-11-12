@@ -58,45 +58,6 @@ langgraph dev --no-reload
 
 在 `http://localhost:2024` 访问 LangGraph Studio 界面。
 
-## 配置
-
-### LLM 设置
-
-本项目支持多种 LLM 提供商，推荐使用 LM Studio 进行本地开发：
-
-#### LM Studio 设置
-
-1. 下载并安装 [LM Studio](https://lmstudio.ai/)
-2. 在 LM Studio 中选择并下载合适的模型
-3. 启动本地服务器（通常在 `http://localhost:1234`）
-
-#### LangSmith 注册
-
-为了获得最佳的开发体验，建议注册 LangSmith 账户：
-
-1. 访问 [LangSmith](https://smith.langchain.com/) 并注册账户
-2. 获取你的 API 密钥
-3. 在 `.env` 文件中配置 `LANGSMITH_API_KEY`
-
-注：即使 LangGraph Studio 使用的是本地 graph，依然需要注册 LangSmith Key（免费），并且登录过 LangSmith （截止 2025-11）
-
-### 环境变量
-
-| 变量 | 必需 | 描述 | 默认值 |
-|------|------|------|--------|
-| `LLM_API_BASE` | 是 | LLM API 端点的基础URL | - |
-| `LLM_MODEL` | 是 | 要使用的模型名称 | - |
-| `LLM_API_KEY` | 是 | 身份验证的 API 密钥 | - |
-| `LANGSMITH_TRACING` | 否 | 启用 LangSmith 追踪 | `false` |
-| `LANGSMITH_API_KEY` | 是 | LangSmith API 密钥 | - |
-
-### 支持的 LLM 提供商
-
-此项目兼容任何 OpenAI 兼容的 API：
-
-- **本地LLM**: LM Studio、Ollama、LocalAI
-- **云服务提供商**: OpenAI、Together AI、Groq 等
-
 ## 项目结构
 
 ```
