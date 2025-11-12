@@ -4,6 +4,22 @@ A minimal conversational AI agent built with LangGraph, designed for agent scaff
 
 [中文版](README_CN.md)
 
+## Prerequisites
+
+### Required Tools
+
+- **Python**: Programming language environment
+- **pip**: Python package manager
+- **Miniconda**: Lightweight conda environment manager
+- **VSCode**: Recommended development environment
+
+### Installation Guides
+
+- [Python for MacOS](https://www.python.org/downloads/macos/)
+- [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
+- [pip Installation](https://pip.pypa.io/en/stable/installation/#)
+- [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
+
 ## Quick Start
 
 ### 1. Environment Setup
@@ -43,22 +59,6 @@ langgraph dev --no-reload
 ```
 
 Access the LangGraph Studio interface at `http://localhost:2024`.
-
-## Prerequisites
-
-### Required Tools
-
-- **Python**: Programming language environment
-- **pip**: Python package manager
-- **Miniconda**: Lightweight conda environment manager
-- **VSCode**: Recommended development environment
-
-### Installation Guides
-
-- [Python for MacOS](https://www.python.org/downloads/macos/)
-- [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
-- [pip Installation](https://pip.pypa.io/en/stable/installation/#)
-- [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
 
 ## Configuration
 
