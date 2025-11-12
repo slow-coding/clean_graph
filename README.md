@@ -114,29 +114,6 @@ clean_graph/
 └── README_CN.md        # Chinese documentation
 ```
 
-### Core Components
-
-- **`graph.py`**: Defines the main conversation graph with state management
-- **`llms.py`**: Configures the LLM client with streaming support
-- **`langgraph.json`**: LangGraph application configuration
-
-## Development
-
-### LangGraph Studio Development
-
-This project is specifically designed to be developed using **LangGraph Studio**, the official development tool for LangGraph applications that provides powerful visualization and debugging capabilities.
-
-Start the development server:
-
-```bash
-langgraph dev --no-reload
-```
-
-This will launch:
-- **LangGraph Studio Interface**: Typically accessible at `http://localhost:2024`
-- **Development Server**: Auto-reload disabled for stability
-- **Real-time Monitoring**: Connected to LangSmith for performance tracing
-
 ## Dependencies
 
 - `langchain~=1.0` - Core LangChain framework

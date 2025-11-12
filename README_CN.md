@@ -73,29 +73,6 @@ clean_graph/
 └── README_CN.md        # 中文版说明文档
 ```
 
-### 核心组件
-
-- **`graph.py`**: 定义主要的对话图，包含状态管理
-- **`llms.py`**: 配置支持流式传输的 LLM 客户端
-- **`langgraph.json`**: LangGraph 应用配置
-
-## 开发
-
-### LangGraph Studio 开发
-
-此项目专门设计为使用 **LangGraph Studio** 进行开发，这是 LangGraph 应用的官方开发工具，提供了强大的可视化和调试功能。
-
-启动开发服务器：
-
-```bash
-langgraph dev --no-reload
-```
-
-这将启动：
-- **LangGraph Studio 界面**: 通常可在 `http://localhost:2024` 访问
-- **开发服务器**: 禁用自动重载以确保稳定性
-- **实时监控**: 连接到 LangSmith 进行性能追踪
-
 ## 依赖项
 
 - `langchain~=1.0` - 核心 LangChain 框架
