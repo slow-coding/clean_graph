@@ -86,19 +86,6 @@ clean_graph/
 
 ## 引用
 
-### 相关工具和文档
+- [LangGraph Studio Doc](https://docs.langchain.com/oss/python/langgraph/studio)
+- [LangGraph Doc](https://docs.langchain.com/oss/python/langgraph/overview)
 
-- **官方文档**
-  - [LangGraph Studio Doc](https://docs.langchain.com/oss/python/langgraph/studio)
-  - [LangGraph Doc](https://docs.langchain.com/oss/python/langgraph/overview)
-
-- **开发工具**
-  - [Python for MacOS](https://www.python.org/downloads/macos/)
-  - [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
-  - [pip Installation](https://pip.pypa.io/en/stable/installation/#)
-  - [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
-  - [LM Studio - Local AI on your computer](https://lmstudio.ai/)
-
-- **相关项目**
-  - [LangGraph](https://github.com/langchain-ai/langgraph) - 底层的图框架
-  - [LangChain](https://github.com/langchain-ai/langchain) - LLM 编排框架

@@ -127,19 +127,5 @@ clean_graph/
 
 ## References
 
-### Related Tools and Documentation
-
-- **Official Documentation**
-  - [LangGraph Studio Doc](https://docs.langchain.com/oss/python/langgraph/studio)
-  - [LangGraph Doc](https://docs.langchain.com/oss/python/langgraph/overview)
-
-- **Development Tools**
-  - [Python for MacOS](https://www.python.org/downloads/macos/)
-  - [Miniconda installation](https://www.anaconda.com/docs/getting-started/miniconda/install#macos-2)
-  - [pip Installation](https://pip.pypa.io/en/stable/installation/#)
-  - [Visual Studio Code on macOS](https://code.visualstudio.com/docs/setup/mac)
-  - [LM Studio - Local AI on your computer](https://lmstudio.ai/)
-
-- **Related Projects**
-  - [LangGraph](https://github.com/langchain-ai/langgraph) - The underlying graph framework
-  - [LangChain](https://github.com/langchain-ai/langchain) - The LLM orchestration framework
+- [LangGraph Studio Doc](https://docs.langchain.com/oss/python/langgraph/studio)
+- [LangGraph Doc](https://docs.langchain.com/oss/python/langgraph/overview)
