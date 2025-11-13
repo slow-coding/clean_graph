@@ -21,6 +21,7 @@ def create_graph():
     graph = StateGraph(State)
     graph.add_node("agent", agent)
     graph.add_edge(START, "agent")
+    graph.add_edge("agent", END)
     return graph.compile()
 
 
